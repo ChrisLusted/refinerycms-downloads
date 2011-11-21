@@ -1,7 +1,7 @@
 <% content_for :body_content_left do %>        
 
-  <%= raw @page.content_for(:body) %>
-
+  <%= raw @page[:body] %>
+  
   <% @categories.each do |category| %>
     <% if category.download_files.any? %>
     <table class="download full">
