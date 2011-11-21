@@ -2,7 +2,7 @@ class Download::FilesController < ApplicationController
   helper :downloads
   before_filter :find_all_categories
   before_filter :find_page
-  before_filter :authorize_as_private_user
+  #before_filter :authorize_as_private_user
   
   def index
     # you can use meta fields from your model instead (e.g. browser_title)

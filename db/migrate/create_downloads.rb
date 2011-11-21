@@ -27,7 +27,7 @@ class CreateDownloads < ActiveRecord::Migration
   def self.down
     UserPlugin.destroy_all({:name => "downloads"})
 
-    Page.delete_all({:link_url => "/download"})
+    Page.delete_all({:link_url => "/downloads"})
 
     drop_table :download_files
     drop_table :download_categories

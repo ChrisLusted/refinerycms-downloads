@@ -6,14 +6,13 @@ User.find(:all).each do |user|
 end
 
 page = Page.create(
-  :title => 'Download',
-  :link_url => '/download',
+  :title => 'Downloads',
+  :link_url => '/downloads',
   :deletable => false,
   :position => ((Page.maximum(:position, :conditions => {:parent_id => nil}) || -1)+1),
-  :menu_match => '^/download(\/|\/.+?|)$'
+  :menu_match => '^/downloads(\/|\/.+?|)$'
 )
 Page.default_parts.each do |default_page_part|
   page.parts.create(:title => default_page_part, :body => nil)
 end
 
-Role.create(:title => 'Downloads')
