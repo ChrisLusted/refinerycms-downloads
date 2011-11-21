@@ -1,5 +1,5 @@
 Refinery::Application.routes.draw do  
-  scope(:path => 'download', :module => 'download') do
+  scope(:path => 'downloads', :module => 'download') do
     root :to => 'files#index' , :as => 'download_root'
   end
   

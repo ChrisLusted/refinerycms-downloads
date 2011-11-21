@@ -1,13 +1,7 @@
 <% content_for :body_content_left do %>        
 
-  <% if current_user && !current_user.has_role?(:refinery) %>
-  <p class="userbuttons">
-    <%= link_to 'Log out', destroy_user_session_path, :class => "link-button-more" %>
-  </p>
-  <% end %>  
-  
-  <%= raw @page[:body] %>
-  
+  <%= raw @page.content_for(:body) %>
+
   <% @categories.each do |category| %>
     <% if category.download_files.any? %>
     <table class="download full">
