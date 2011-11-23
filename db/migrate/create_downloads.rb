@@ -13,6 +13,7 @@ class CreateDownloads < ActiveRecord::Migration
       t.string :download_category_id
       t.integer :file_id
       t.integer :position
+      t.integer :thumb_id
 
       t.timestamps
     end

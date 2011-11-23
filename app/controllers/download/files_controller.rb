@@ -15,6 +15,10 @@ protected
   def find_all_categories
     @categories = DownloadCategory.find(:all, :order => "position ASC")
   end
+  
+  def find_all_fieles
+    @categories = DownloadCategory.find(:all, :order => "position ASC")
+  end
 
   def find_page
     @page = Page.find_by_link_url("/downloads")
