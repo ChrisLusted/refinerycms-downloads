@@ -5,7 +5,7 @@ class DownloadFile < ActiveRecord::Base
   validates :title, :presence => true, :uniqueness => true
   
   belongs_to :file, :class_name => 'Resource'
-  belongs_to :thumb, :class_name => 'Image'
+  belongs_to :image, :class_name => 'Image'
   belongs_to :download_category  
    
 end
